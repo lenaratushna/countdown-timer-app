@@ -59,14 +59,16 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------*/
 body {
   background: url("../img/bg.jpg") center center/cover no-repeat;
-  font-family: 'Roboto Slab', serif; }
+  font-family: 'Roboto Slab', serif;
+  font-size: 1em; }
 
 .big-text {
   font-size: 6rem;
-  font-family: 'Anonymous Pro', monospace;
+  font-family: monospace;
   font-weight: 700; }
 
 .countdown {
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,20 +81,31 @@ body {
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
-  min-height: 100vh; }
+          align-items: center; }
   .countdown__title {
     font-size: 4rem; }
   .countdown__container {
     margin-top: 6rem;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
   .countdown__element {
-    padding: 1em;
+    padding: 1rem;
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 1rem;
     text-align: center;
-    margin: 0 2rem; }
+    margin: 0 2rem 1rem; }
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 0.6em; } }
+@media screen and (max-width: 320px) {
+  .countdown__title {
+    font-size: 3rem; } }
 
 /*# sourceMappingURL=style.css.map */
